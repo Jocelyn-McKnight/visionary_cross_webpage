@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="left-section">
-            <img src="path-to-image.jpg" alt="Project Image">
+            <img src="img/raven_ruthwell.png" alt="Project Image">
         </div>
         <div class="right-section">
             <nav class="navbar">

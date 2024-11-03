@@ -10,38 +10,41 @@
 
     <div class="container">
         <div class="left-section">
+	<div>
             <!--STYLESHEET-->
-<link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
-<!--SPIDERGL-->
-<script type="text/javascript" src="js/spidergl.js"></script>
-<!--JQUERY-->
-<script type="text/javascript" src="js/jquery.js"></script>
-<!--PRESENTER-->
-<script type="text/javascript" src="js/presenter.js"></script>
-<!--3D MODELS LOADING AND RENDERING-->
-<script type="text/javascript" src="js/nexus.js"></script>
-<script type="text/javascript" src="js/ply.js"></script>
-<!--TRACKBALLS-->
-<script type="text/javascript" src="js/trackball_sphere.js"></script>
-<script type="text/javascript" src="js/trackball_turntable.js"></script>
-<script type="text/javascript" src="js/trackball_turntable_pan.js"></script>
-<script type="text/javascript" src="js/trackball_pantilt.js"></script>
-<!--UTILITY-->
-<script type="text/javascript" src="js/init.js"></script>
+		<link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>
+		<!--SPIDERGL-->
+		<script type="text/javascript" src="3dhop/js/spidergl.js"></script>
+		<!--JQUERY-->
+		<script type="text/javascript" src="3dhop/js/jquery.js"></script>
+		<!--PRESENTER-->
+		<script type="text/javascript" src="3dhop/js/presenter.js"></script>
+	<!--3D MODELS LOADING AND RENDERING-->
+	<script type="text/javascript" src="3dhop/js/nexus.js"></script>
+	<script type="text/javascript" src="3dhop/js/ply.js"></script>
+	
+	<!--TRACKBALLS-->
+	<script type="text/javascript" src="3dhop/js/trackball_sphere.js"></script>
+	<script type="text/javascript" src="3dhop/js/trackball_turntable.js"></script>
+	<script type="text/javascript" src="3dhop/js/trackball_turntable_pan.js"></script>
+	<script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
+
+	<!--UTILITY-->
+	<script type="text/javascript" src="3dhop/js/init.js"></script>
             
-<div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
- <div id="toolbar">
-  <img id="home"         title="Home"                  src="skins/dark/home.png"            /><br/>
-  <img id="zoomin"       title="Zoom In"               src="skins/dark/zoomin.png"          /><br/>
-  <img id="zoomout"      title="Zoom Out"              src="skins/dark/zoomout.png"         /><br/>
-  <img id="light_on"     title="Disable Light Control" src="skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="light"        title="Enable Light Control"  src="skins/dark/lightcontrol.png"    /><br/>
-  <img id="screenshot"   title="Save Screenshot"       src="skins/dark/screenshot.png"      /><br/>
-  <img id="full_on"      title="Exit Full Screen"      src="skins/dark/full_on.png"         style="position:absolute; visibility:hidden;"/>
-  <img id="full"         title="Full Screen"           src="skins/dark/full.png"            />
-</div>
- <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/light.jpg)"/>
-</div>
+		<div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
+		<div id="toolbar">
+ 		<img id="home"         title="Home"                  src="skins/dark/home.png"            /><br/>
+  		<img id="zoomin"       title="Zoom In"               src="skins/dark/zoomin.png"          /><br/>
+		<img id="zoomout"      title="Zoom Out"              src="skins/dark/zoomout.png"         /><br/>
+ 		<img id="light_on"     title="Disable Light Control" src="skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
+  		<img id="light"        title="Enable Light Control"  src="skins/dark/lightcontrol.png"    /><br/>
+  		<img id="screenshot"   title="Save Screenshot"       src="skins/dark/screenshot.png"      /><br/>
+  		<img id="full_on"      title="Exit Full Screen"      src="skins/dark/full_on.png"         style="position:absolute; visibility:hidden;"/>
+  		<img id="full"         title="Full Screen"           src="skins/dark/full.png"            />
+		</div>
+ 	<canvas id="draw-canvas" style="background-image: url(3dhop/skins/backgrounds/light.jpg)"/>
+	</div>
 
 <script type="text/javascript">
 var presenter = null;
@@ -51,7 +54,7 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/Raven_Ruthwell_Cross_5.ply" } 
+			"mesh_1" : { url: "3dhop/models/Raven_Ruthwell_Cross_5.ply" } 
 		},
 		modelInstances : {
 			"model_1" : { 

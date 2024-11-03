@@ -3,22 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Model Viewer</title>
+  <title>3DHOP - 3D Model Viewer</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="stylesheet/3dhop.css">
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Scripts -->
+  <script src="js/spidergl.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/presenter.js"></script>
+  <script src="js/nexus.js"></script>
+  <script src="js/ply.js"></script>
+  <script src="js/trackball_sphere.js"></script>
+  <script src="js/trackball_turntable.js"></script>
+  <script src="js/trackball_turntable_pan.js"></script>
+  <script src="js/trackball_pantilt.js"></script>
+  <script src="js/init.js"></script>
 </head>
 <body>
   <div class="container">
-    <!-- Left side: 3D Model Viewer -->
-    <div class="model-viewer">
-      <canvas id="3d-model-canvas"></canvas>
+    <!-- Left side: 3DHOP Viewer -->
+    <div class="model-viewer" id="3dhop" onmousedown="if (event.preventDefault) event.preventDefault()">
+      <div id="tdhlg"></div>
+      <div id="toolbar">
+        <img id="home" title="Home" src="skins/dark/home.png" onclick="actionsToolbar('home')"/><br/>
+        <img id="zoomin" title="Zoom In" src="skins/dark/zoomin.png" onclick="actionsToolbar('zoomin')"/><br/>
+        <img id="zoomout" title="Zoom Out" src="skins/dark/zoomout.png" onclick="actionsToolbar('zoomout')"/><br/>
+        <img id="light" title="Enable Light Control" src="skins/dark/lightcontrol.png" onclick="actionsToolbar('light')"/><br/>
+        <img id="screenshot" title="Save Screenshot" src="skins/dark/screenshot.png" onclick="actionsToolbar('screenshot')"/><br/>
+        <img id="full" title="Full Screen" src="skins/dark/full.png" onclick="actionsToolbar('full')"/>
+      </div>
+      <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/light.jpg)"></canvas>
     </div>
 
-    <!-- Right side: Text about the 3D Model -->
+    <!-- Right side: Information about the model -->
     <div class="model-info">
       <h1>About the 3D Model</h1>
-      <p>This section will contain information about the 3D model displayed on the left.</p>
+      <p>This section contains information about the 3D model displayed on the left. Describe the historical context, features, and significance of the model here.</p>
     </div>
   </div>
-  <script src="scripts.js"></script>
+
+  <script type="text/javascript">
+    var presenter = null;
+
+    function setup3dhop() {
+      presenter = new Presenter("draw-canvas");
+      presenter.setScene({
+        meshes: {
+          "mesh_1": { url: "models/Raven_Ruthwell_Cross_5.ply" }
+        },
+        modelInstances: {
+          "model_1": { 
+            mesh: "mesh_1",
+            color: [0.8, 0.7, 0.75]
+          }
+        },
+        trackball: {
+          type: TurnTableTrackball,
+          trackOptions: {
+            startDistance: 3.0,
+            minMaxDist: [1.0, 5.0],
+            minMaxPhi: [-180, 180],
+            minMaxTheta: [-30.0, 70.0]
+          }
+        }
+      });
+    }
+
+    function actionsToolbar(action) {
+      if (action == 'home') presenter.resetTrackball();
+      else if (action == 'zoomin') presenter.zoomIn();
+      else if (action == 'zoomout') presenter.zoomOut();
+      else if (action == 'light') presenter.enableLightTrackball(!presenter.isLightTrackballEnabled());
+      else if (action == 'screenshot') presenter.saveScreenshot();
+      else if (action == 'full') fullscreenSwitch();
+    }
+
+    $(document).ready(function() {
+      init3dhop();
+      setup3dhop();
+    });
+  </script>
 </body>
 </html>

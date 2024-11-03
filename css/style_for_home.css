@@ -38,6 +38,7 @@ body {
     justify-content: flex-start;
     gap: 10px;
     margin-bottom: 20px;
+    background-color: #333333;
 }
 
 .navbar button {

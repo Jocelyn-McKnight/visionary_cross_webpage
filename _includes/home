@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_for_page.css">
 </head>
 <body>
+
     <div class="container">
         <div class="left-section">
             <img src="img/raven_ruthwell.png" alt="Project Image">
         </div>
+
         <div class="right-section">
             <nav class="navbar">
                 <button onclick="location.href='page1.html'">Page 1</button>
@@ -23,6 +25,7 @@
                 <p>Project information goes here. You can give a brief description of what the project is about, its goals, and any relevant details.</p>
             </div>
         </div>
+
     </div>
 </body>
 </html>

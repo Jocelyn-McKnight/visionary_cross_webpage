@@ -3,14 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Ruthwell</title>
     <link rel="stylesheet" href="css/style_for_home.css">
 </head>
 <body>
-
     <div class="container">
         <div class="left-section">
-            <img src="img/raven_ruthwell.png" alt="Project Image">
+            <!--STYLESHEET-->
+            <link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>
+            <!--SPIDERGL-->
+            <script type="text/javascript" src="3dhop/js/spidergl.js"></script>
+            <!--JQUERY-->
+            <script type="text/javascript" src="3dhop/js/jquery.js"></script>
+            <!--PRESENTER-->
+            <script type="text/javascript" src="3dhop/js/presenter.js"></script>
+            <!--3D MODELS LOADING AND RENDERING-->
+            <script type="text/javascript" src="3dhop/js/nexus.js"></script>
+            <script type="text/javascript" src="3dhop/js/ply.js"></script>
+
+            <!--TRACKBALLS-->
+            <script type="text/javascript" src="3dhop/js/trackball_sphere.js"></script>
+            <script type="text/javascript" src="3dhop/js/trackball_turntable.js"></script>
+            <script type="text/javascript" src="3dhop/js/trackball_turntable_pan.js"></script>
+            <script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
+
+            <!--UTILITY-->
+            <script type="text/javascript" src="3dhop/js/init.js"></script>
+            
+            <div id="3dhop" class="tdhop">
+                <div id="tdhlg"></div>
+                <div id="toolbar">
+                    <img id="home" title="Home" src="skins/dark/home.png" /><br/>
+                    <img id="zoomin" title="Zoom In" src="skins/dark/zoomin.png" /><br/>
+                    <img id="zoomout" title="Zoom Out" src="skins/dark/zoomout.png" /><br/>
+                    <img id="light_on" title="Disable Light Control" src="skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
+                    <img id="light" title="Enable Light Control" src="skins/dark/lightcontrol.png" /><br/>
+                    <img id="screenshot" title="Save Screenshot" src="skins/dark/screenshot.png" /><br/>
+                    <img id="full_on" title="Exit Full Screen" src="skins/dark/full_on.png" style="position:absolute; visibility:hidden;"/>
+                    <img id="full" title="Full Screen" src="skins/dark/full.png" />
+                </div>
+                <canvas id="draw-canvas" style="width: 100%; height: 100%; background-image: url(3dhop/skins/backgrounds/light.jpg)"></canvas>
+            </div>
+
+            <script type="text/javascript">
+                var presenter = null;
+
+                function setup3dhop() { 
+                    presenter = new Presenter("draw-canvas");
+
+                    presenter.setScene({
+                        meshes: {
+                            "mesh_1" : { url: "3dhop/models/Raven_Ruthwell_Cross_5.ply" } 
+                        },
+                        modelInstances : {
+                            "model_1" : { 
+                                mesh  : "mesh_1",
+                                color : [0.8, 0.7, 0.75]
+                            }
+                        },
+                        trackball: {
+                            type : TurnTableTrackball,
+                            trackOptions : {
+                                startDistance: 3.0,
+                                minMaxDist: [1.0, 5.0],
+                                minMaxPhi: [-180, 180],
+                                minMaxTheta: [-30.0, 70.0]
+                            }
+                        }
+                    });
+                }
+
+                function actionsToolbar(action) {
+                    if(action=='home') presenter.resetTrackball();
+                    else if(action=='zoomin') presenter.zoomIn();
+                    else if(action=='zoomout') presenter.zoomOut();
+                    else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+                    else if(action=='screenshot') presenter.saveScreenshot();
+                    else if(action=='full' || action=='full_on') fullscreenSwitch();
+                }
+
+                $(document).ready(function(){
+                    init3dhop();
+                    setup3dhop();
+                });
+            </script>
         </div>
 
         <div class="right-section">
@@ -22,10 +98,20 @@
             </nav>
             <div class="info">
                 <h1>Bewcastle</h1>
-                <p>Project information goes here. You can give a brief description of what the project is about, its goals, and any relevant details.</p>
+                <p>Project information goes here. 
+                <lb/>  
+                <lb/>
+                <lb/>
+                You can give a brief description of what the project is about, 
+                <lb/>
+                <lb/>
+                <lb/>
+                <lb/>
+                <lb/>
+                <lb/>
+                its goals, and any relevant details.</p>
             </div>
         </div>
-
     </div>
 </body>
 </html>

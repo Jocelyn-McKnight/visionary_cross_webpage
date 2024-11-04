@@ -1,6 +1,11 @@
-  body {
+body {
     font-family: 'Times New Roman', serif;
     padding: 30px;
+}
+
+/* Center all h1 elements */
+h1 {
+    text-align: center;
 }
 
 /* Container for left and right columns */
@@ -24,7 +29,7 @@
 
 .left img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -57,11 +62,6 @@
 /* Info section styling */
 .info {
     flex-grow: 1;
-}
-
-.info h1 {
-    margin-top: 0;
-    text-align: center;
 }
 
 /* Mobile layout: Stack columns on top of each other */

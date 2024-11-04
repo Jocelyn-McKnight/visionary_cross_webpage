@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruthwell</title>
+    
+    <!-- External CSS and 3DHOP Stylesheet -->
     <link rel="stylesheet" href="css/style_for_home.css">
+    <link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>
+
+    <!-- External 3DHOP Scripts -->
+    <script type="text/javascript" src="3dhop/js/spidergl.js"></script>
+    <script type="text/javascript" src="3dhop/js/jquery.js"></script>
+    <script type="text/javascript" src="3dhop/js/presenter.js"></script>
+    <script type="text/javascript" src="3dhop/js/nexus.js"></script>
+    <script type="text/javascript" src="3dhop/js/ply.js"></script>
+    <script type="text/javascript" src="3dhop/js/trackball_sphere.js"></script>
+    <script type="text/javascript" src="3dhop/js/trackball_turntable.js"></script>
+    <script type="text/javascript" src="3dhop/js/trackball_turntable_pan.js"></script>
+    <script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
+    <script type="text/javascript" src="3dhop/js/init.js"></script>
 </head>
 <body>
     
- <!-- Header Section -->
+    <!-- Header Section -->
     <header class="header">
         <h1>The Visionary Cross Project</h1>
     </header>
@@ -18,20 +33,6 @@
         
         <!-- Left Section for 3D Model -->
         <div class="left">
-
-            <!-- External 3DHOP Stylesheet and Scripts -->
-            <link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>
-            <script type="text/javascript" src="3dhop/js/spidergl.js"></script>
-            <script type="text/javascript" src="3dhop/js/jquery.js"></script>
-            <script type="text/javascript" src="3dhop/js/presenter.js"></script>
-            <script type="text/javascript" src="3dhop/js/nexus.js"></script>
-            <script type="text/javascript" src="3dhop/js/ply.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_sphere.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_turntable.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_turntable_pan.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
-            <script type="text/javascript" src="3dhop/js/init.js"></script>
-            
             <div id="3dhop" class="tdhop">
                 <div id="tdhlg"></div>
                 <div id="toolbar">
@@ -73,12 +74,12 @@
                 }
 
                 function actionsToolbar(action) {
-                    if(action=='home') presenter.resetTrackball();
-                    else if(action=='zoomin') presenter.zoomIn();
-                    else if(action=='zoomout') presenter.zoomOut();
-                    else if(action=='light') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); }
-                    else if(action=='screenshot') presenter.saveScreenshot();
-                    else if(action=='full') presenter.fullscreen();
+                    if(action == 'home') presenter.resetTrackball();
+                    else if(action == 'zoomin') presenter.zoomIn();
+                    else if(action == 'zoomout') presenter.zoomOut();
+                    else if(action == 'light') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); }
+                    else if(action == 'screenshot') presenter.saveScreenshot();
+                    else if(action == 'full') presenter.fullscreen();
                 }
 
                 $(document).ready(function(){
@@ -98,7 +99,7 @@
             </nav>
             <div class="info">
                 <h1>Project Title</h1>
-                <p>This is a beta version of the Ruthwell Cross edition published by the [ Visionary Cross project] by means of the [3DHOP viewer]. This edition is intended for use by students, teachers, and members of the public who are interested in exploring the cross and learning more about it. The final version will contain tools required for more advanced applications. Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately by writing an email to visionarycrossproject@gmail.com. Your help in this regard is greatly appreciated.</p>
+                <p>This is a beta version of the Ruthwell Cross edition published by the [Visionary Cross project] by means of the [3DHOP viewer]. This edition is intended for use by students, teachers, and members of the public who are interested in exploring the cross and learning more about it. The final version will contain tools required for more advanced applications. Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately by writing an email to visionarycrossproject@gmail.com. Your help in this regard is greatly appreciated.</p>
                 
                 <p><strong>CREDITS</strong></p>
                 <p>Project direction<br>
@@ -108,11 +109,13 @@
                 <p><strong>ISTI research support</strong><br>
                 Marco Callieri, CNR/ISTI</p>
 
-                <p><strong>3DHOP customization</strong></p>
+                <p><strong>3DHOP customization</strong><br>
+                Jurgen Memaj, University of Pisa</p>
             </div>
         </div>
+    </div>
 
-      <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="footer">
         <h1>This is the footer</h1>
     </footer>

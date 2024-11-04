@@ -6,12 +6,6 @@ body {
     padding: 30px;
 }
 
-.header h1,
-.footer h1 {
-    text-align: center;
-    margin: 0 auto;
-}
-
 /* Container for left and right columns */
 .container {
     display: flex;

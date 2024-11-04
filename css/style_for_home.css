@@ -70,6 +70,11 @@ body {
   }
 }
 
+.item1 { grid-area: header; }
+.item3 { grid-area: left; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+    
 .grid-container {
   display: grid;
   grid-template-areas:

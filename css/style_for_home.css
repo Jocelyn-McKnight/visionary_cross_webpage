@@ -21,10 +21,10 @@ h1 {
 .left {
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
     flex-direction: column;
+    align-items: flex-start; /* Aligns left navbar to the start */
+    justify-content: flex-start;
+    background-color: #f5f5f5;
     padding: 0;
     box-sizing: border-box;
 }
@@ -39,9 +39,9 @@ h1 {
 .right {
     flex: 1;
     display: flex;
-    align-items: flex-start; /* Align content to the top */
-    justify-content: flex-start;
     flex-direction: column;
+    align-items: flex-start; /* Aligns right navbar to the start */
+    justify-content: flex-start;
     padding: 20px 20px 0 20px; /* Adjust padding to align with navbar */
     box-sizing: border-box;
 }
@@ -50,8 +50,9 @@ h1 {
 .navbar {
     display: flex;
     gap: 10px;
-    justify-content: center;
     width: 100%;
+    margin-bottom: 20px; /* Ensure consistent spacing */
+    justify-content: flex-start; /* Aligns navbar buttons to the left for consistency */
 }
 
 .navbar button {

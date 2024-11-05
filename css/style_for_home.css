@@ -52,7 +52,7 @@ h1 {
     gap: 10px;
     width: 100%;
     margin-bottom: 20px; /* Ensure consistent spacing */
-    justify-content: flex-start; /* Aligns navbar buttons to the left for consistency */
+    justify-content: center;
 }
 
 .navbar button {

@@ -1,6 +1,7 @@
 body {
     font-family: 'Times New Roman', serif;
     padding: 30px;
+    margin-bottom: 20px;
 }
 
 /* Center all h1 elements */
@@ -30,6 +31,7 @@ h1 {
 .left img {
     width: 100%;
     height: auto;
+    margin-top: 0;
 }
 
 /* Right column */
@@ -46,9 +48,6 @@ h1 {
 /* Navbar styling */
 .navbar {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
 }

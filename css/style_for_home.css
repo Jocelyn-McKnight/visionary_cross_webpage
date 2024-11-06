@@ -9,6 +9,8 @@ header {
 
 body {
     font-family: 'Times New Roman', serif;
+    background-color: black;
+    color: white;
 }
 
 /* Center all h1 elements */

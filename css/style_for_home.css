@@ -9,6 +9,10 @@ header {
 
 body {
     font-family: 'Times New Roman', serif;
+    border: 5px solid black; /* Adds a black border around the whole webpage */
+    margin: 0; /* Removes any default margin around the body */
+    padding: 0; /* Removes any default padding around the body */
+    box-sizing: border-box;
 }
 
 /* Center all h1 elements */

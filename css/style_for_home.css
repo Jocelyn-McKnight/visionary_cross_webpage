@@ -1,7 +1,5 @@
 header {
     font-family: 'Times New Roman', serif;
-    padding: 30px;
-    margin-bottom: 20px;
 }
 
 .header img {
@@ -55,7 +53,7 @@ h1 {
 
 #draw-canvas {
     width: 100%;
-    height: 400px; /* Increase this height as needed */
+    height: 600px; /* Increase this height as needed */
 }
 
 /* Right column */

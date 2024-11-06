@@ -40,6 +40,11 @@ h1 {
     height: 100%;
 }
 
+#draw-canvas {
+    width: 100%;
+    height: 600px; /* Increase this height as needed */
+}
+
 /* Right column */
 .right {
     flex: 1;
@@ -71,7 +76,12 @@ h1 {
     .container {
         flex-direction: column; /* Stack on top of each other */
     }
-  
+
+@media (max-width: 768px) {
+    #draw-canvas {
+        height: 400px; /* Reduced height for smaller screens */
+    }
+
     .left,
     .right {
         width: 100%;

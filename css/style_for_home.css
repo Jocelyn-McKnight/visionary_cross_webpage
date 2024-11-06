@@ -1,6 +1,8 @@
 header {
-    font-family: 'Times New Roman', serif;
-}
+    padding: 0;
+    margin: 0;
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Prevent any overflow issues */
 
 .header img {
     width: 100%; /* Make the image fill the container's width */

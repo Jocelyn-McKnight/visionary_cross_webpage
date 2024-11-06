@@ -17,76 +17,12 @@
     <!-- Main Container for Left and Right Columns -->
     <div class="container">
         
-        <!-- Left Section for 3D Model -->
-        <div class="left">
-            <!-- External 3DHOP Stylesheet and Scripts -->
-            <link type="text/css" rel="stylesheet" href="3dhop/stylesheet/3dhop.css"/>
-            <script type="text/javascript" src="3dhop/js/spidergl.js"></script>
-            <script type="text/javascript" src="3dhop/js/jquery.js"></script>
-            <script type="text/javascript" src="3dhop/js/presenter.js"></script>
-            <script type="text/javascript" src="3dhop/js/nexus.js"></script>
-            <script type="text/javascript" src="3dhop/js/ply.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_sphere.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_turntable.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_turntable_pan.js"></script>
-            <script type="text/javascript" src="3dhop/js/trackball_pantilt.js"></script>
-            <script type="text/javascript" src="3dhop/js/init.js"></script>
-            
-            <div id="3dhop" class="tdhop">
-                <div id="tdhlg"></div>
-                <div id="toolbar">
-                    <img id="home" title="Home" src="3dhop/skins/dark/home.png" onclick="actionsToolbar('home')" /><br/>
-                    <img id="zoomin" title="Zoom In" src="3dhop/skins/dark/zoomin.png" onclick="actionsToolbar('zoomin')" /><br/>
-                    <img id="zoomout" title="Zoom Out" src="3dhop/skins/dark/zoomout.png" onclick="actionsToolbar('zoomout')" /><br/>
-                    <img id="light" title="Enable Light Control" src="3dhop/skins/dark/lightcontrol.png" onclick="actionsToolbar('light')" /><br/>
-                    <img id="screenshot" title="Save Screenshot" src="3dhop/skins/dark/screenshot.png" onclick="actionsToolbar('screenshot')" /><br/>
-                    <img id="full" title="Full Screen" src="3dhop/skins/dark/full.png" onclick="actionsToolbar('full')" />
-                </div>
-                <canvas id="draw-canvas" style="width: 100%; height: 100%; background-image: url(3dhop/skins/backgrounds/light.jpg)"></canvas>
-            </div>
-
-            <script type="text/javascript">
-                var presenter = null;
-
-                function setup3dhop() { 
-                    presenter = new Presenter("draw-canvas");
-                    presenter.setScene({
-                        meshes: {
-                            "mesh_1" : { url: "3dhop/models/Raven_Ruthwell_Cross_5.ply" } 
-                        },
-                        modelInstances : {
-                            "model_1" : { 
-                                mesh  : "mesh_1",
-                                color : [0.8, 0.7, 0.75]
-                            }
-                        },
-                        trackball: {
-                            type : TurnTableTrackball,
-                            trackOptions : {
-                                startDistance: 3.0,
-                                minMaxDist: [1.0, 5.0],
-                                minMaxPhi: [-180, 180],
-                                minMaxTheta: [-30.0, 70.0]
-                            }
-                        }
-                    });
-                }
-
-                function actionsToolbar(action) {
-                    if(action=='home') presenter.resetTrackball();
-                    else if(action=='zoomin') presenter.zoomIn();
-                    else if(action=='zoomout') presenter.zoomOut();
-                    else if(action=='light') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); }
-                    else if(action=='screenshot') presenter.saveScreenshot();
-                    else if(action=='full') presenter.fullscreen();
-                }
-
-                $(document).ready(function(){
-                    init3dhop();
-                    setup3dhop();
-                });
-            </script>
-        </div>
+    <div class="left">
+         <nav class="navbar">
+            <button onclick="window.open('https://vcg.isti.cnr.it/activities/visionarycross/crosses/bewcastle.html', '_blank')">Visit Full 3D Bewcastle Model</button>
+         </nav>
+        <img src="img/bewcastle.png">
+    </div>
 
         <!-- Right Section for Navigation and Project Info -->
         <div class="right">
@@ -97,8 +33,8 @@
                 <button onclick="location.href='bruxelles.html'">Bruxelles</button>
             </nav>
             <div class="info">
-                <h1>Project Title</h1>
-                <p>This is a beta version of the Bewcastle Cross edition published by the [ Visionary Cross project] by means of the [3DHOP viewer]. This edition is intended for use by students, teachers, and members of the public who are interested in exploring the cross and learning more about it. The final version will contain tools required for more advanced applications. Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately by writing an email to visionarycrossproject@gmail.com. Your help in this regard is greatly appreciated.</p>
+                <h1>The Bewcastle Cross</h1>
+                <p>This is a beta version of the Bruxelles Cross edition published by the [ Visionary Cross project] by means of the [3DHOP viewer]. This edition is intended for use by students, teachers, and members of the public who are interested in exploring the cross and learning more about it. The final version will contain tools required for more advanced applications. Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately by writing an email to visionarycrossproject@gmail.com. Your help in this regard is greatly appreciated.</p>
                 
                 <p><strong>CREDITS</strong></p>
                 <p>Project direction<br>

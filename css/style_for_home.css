@@ -60,7 +60,7 @@ h1 {
     flex-direction: column;
     align-items: flex-start; /* Aligns right navbar to the start */
     justify-content: flex-start;
-    padding: 20px 20px 0 20px; /* Adjust padding to align with navbar */
+    padding: 20px; /* Adjust padding to align with navbar */
     box-sizing: border-box;
 }
 

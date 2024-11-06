@@ -1,13 +1,10 @@
 header {
-    padding: 0;
-    margin: 0;
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Prevent any overflow issues */
+    font-family: 'Times New Roman', serif;
+}
 
 .header img {
     width: 100%; /* Make the image fill the container's width */
     height: auto; /* Maintain aspect ratio */
-    max-height: 300px; /* Optional: Limit height for desktop if the image is too tall */
 }
 
 body {

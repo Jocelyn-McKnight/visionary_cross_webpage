@@ -81,6 +81,7 @@ h1 {
         transition: opacity 0.3s ease;
         pointer-events: none; /* Makes the text unclickable */
         text-align: center;
+        width: 100%;
 }
 
 .image-container:hover .hover-text {

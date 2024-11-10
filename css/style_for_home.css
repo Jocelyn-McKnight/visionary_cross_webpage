@@ -16,8 +16,7 @@
     font-size: 75px;
     font-family: 'Times New Roman', serif;
     color: white; /* Adjust color based on visibility over the image */
-    padding: 5px 10px;
-    border-radius: 5px; /* Optional: rounded corners */
+    text-align: center;
 }
 
 body {

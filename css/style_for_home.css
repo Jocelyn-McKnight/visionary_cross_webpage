@@ -73,6 +73,12 @@ h1 {
     margin-top: 0;
 }
 
+.bubble img {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
 .left-section 3dhop {
     max-width: 100%;
     height: auto;
@@ -172,6 +178,10 @@ h1 {
         white-space: nowrap;
         padding: 0 10px;
     }
+
+.bubble img {
+    display: none; /* Hide by default on desktop */
+}
 
     /* Show the second image on mobile and place it below the right column */
     .second-image {

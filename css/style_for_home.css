@@ -168,7 +168,7 @@ h1 {
     .header .header-text {
         font-size: 24px; /* Further scale down font size on smaller screens */
         top: 5px; /* Adjust top positioning for mobile */
-        white-space: normal; /* Allow text wrapping */
+        white-space: nowrap; /* Allow text wrapping */
         padding: 0 10px; /* Add padding to prevent edge overflow */
     }
 }

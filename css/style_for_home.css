@@ -141,23 +141,21 @@ h1 {
     cursor: pointer;
 }
 
-/* Second image styling */
-.second-image {
-    display: none; /* Hide by default on desktop */
-}
-
-/* Mobile layout: Stack columns on top of each other and display the second image */
+/* Mobile layout: Stack columns on top of each other */
 @media (max-width: 768px) {
+        .header img {
+        max-height: 200px; /* Reduce max-height for mobile */
+    }
+
+        .header .header-text {
+        font-size: 24px; /* Further scale down font size on smaller screens */
+        top: 5px; /* Adjust top positioning for mobile */
+        white-space: nowrap;
+        padding: 0 10px; /* Add padding to prevent edge overflow */
+    }
+    
     .container {
-        flex-direction: column; /* Stack columns vertically */
-    }
-
-    .header img {
-        max-height: 200px;
-    }
-
-    #draw-canvas {
-        height: 400px;
+        flex-direction: column; /* Stack on top of each other */
     }
 
     .left,
@@ -166,21 +164,7 @@ h1 {
         height: auto;
     }
 
-    .header .header-text {
-        font-size: 24px;
-        top: 5px;
-        white-space: nowrap;
-        padding: 0 10px;
-    }
-
-.bubble-img {
-    display: none; /* Hide by default on desktop */
-}
-
-    /* Show the second image on mobile and place it below the right column */
-    .second-image {
-        display: block; /* Show image on mobile below the right column */
-        margin-top: 20px; /* Optional spacing */
-        width: 100%; /* Adjust width for mobile view */
+        #draw-canvas {
+        height: 400px; /* Reduced height for smaller screens */
     }
 }

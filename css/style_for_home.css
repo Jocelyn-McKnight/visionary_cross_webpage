@@ -147,6 +147,24 @@ h1 {
         flex-direction: column; /* Stack on top of each other */
     }
 
+      
+  /* Move the second image under the right column */
+  .left img:nth-of-type(2) {
+    display: block;
+    margin-top: 20px; /* Optional: add spacing */
+    order: 2;
+  }
+
+  /* Hide the second image initially */
+  .left img:nth-of-type(2) {
+    display: none;
+  }
+
+  /* Display the second image below the right column */
+  .right + .left img:nth-of-type(2) {
+    display: block;
+  }
+
 @media (max-width: 768px) {
     .header img {
         max-height: 200px; /* Reduce max-height for mobile */
@@ -168,7 +186,7 @@ h1 {
     .header .header-text {
         font-size: 24px; /* Further scale down font size on smaller screens */
         top: 5px; /* Adjust top positioning for mobile */
-        white-space: normal; /* Allow text wrapping */
+        white-space: nowrap;
         padding: 0 10px; /* Add padding to prevent edge overflow */
     }
 }

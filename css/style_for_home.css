@@ -13,9 +13,9 @@
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 75px;
+    font-family: 'Times New Roman', serif;
     color: white; /* Adjust color based on visibility over the image */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: add background for better readability */
     padding: 5px 10px;
     border-radius: 5px; /* Optional: rounded corners */
 }

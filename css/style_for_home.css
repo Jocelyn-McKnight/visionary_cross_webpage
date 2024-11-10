@@ -147,42 +147,31 @@ h1 {
         flex-direction: column; /* Stack columns vertically */
     }
 
-    /* Set order for left and right columns */
+    /* Set the left column to appear first, right column second */
     .left {
-        order: 1; /* Move left column to the top */
-    }
-    
-    .right {
-        order: 2; /* Move right column below the left */
+        order: 1;
     }
 
-    /* Move the second image to appear below the right column */
+    .right {
+        order: 2;
+    }
+
+    /* Move the second image to appear as a separate section below the right column */
     .left img:nth-of-type(2) {
+        position: relative;
+        display: block;
+        width: 100%; /* Optional: adjust image size for mobile */
+        margin-top: 20px; /* Add spacing */
         order: 3;
-        width: 100%; /* Optional: adjust the image size for mobile */
-        margin-top: 20px; /* Optional: add spacing */
     }
 
-    /* Reduce header image size for mobile */
-    .header img {
-        max-height: 200px;
+    /* Hide the second image initially */
+    .left img:nth-of-type(2) {
+        display: none;
     }
 
-    /* Additional styling for smaller screens */
-    #draw-canvas {
-        height: 400px;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        height: auto;
-    }
-
-    .header .header-text {
-        font-size: 24px;
-        top: 5px;
-        white-space: nowrap;
-        padding: 0 10px;
+    /* Make the second image visible after the right column */
+    .right + .left img:nth-of-type(2) {
+        display: block;
     }
 }

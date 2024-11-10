@@ -17,6 +17,7 @@
     font-family: 'Times New Roman', serif;
     color: white; /* Adjust color based on visibility over the image */
     text-align: center;
+    white-space: nowrap;
 }
 
 body {

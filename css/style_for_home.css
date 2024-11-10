@@ -1,22 +1,23 @@
-header {
-    font-family: 'Times New Roman', serif;
+.header {
+    position: relative;
+    text-align: center;
 }
 
 .header img {
-    width: 100%; /* Make the image fill the container's width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
-.header text {
+.header .header-text {
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    font-family: 'Times New Roman', serif;
-
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white; /* Adjust color based on visibility over the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add background for better readability */
+    padding: 5px 10px;
+    border-radius: 5px; /* Optional: rounded corners */
 }
 
 body {

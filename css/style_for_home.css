@@ -30,6 +30,7 @@
     color: white; /* Adjust color based on visibility over the image */
     text-align: center;
     white-space: nowrap;
+    z-index: 2;
 }
 
 body {

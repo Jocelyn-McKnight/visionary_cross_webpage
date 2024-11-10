@@ -157,8 +157,8 @@ h1 {
         height: 400px; /* Reduced height for smaller screens */
     }
 
-    .left,
-    .right {
+    .right,
+    .left {
         width: 100%;
         height: auto;
     }

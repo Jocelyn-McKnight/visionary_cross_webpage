@@ -147,32 +147,21 @@ h1 {
         flex-direction: column; /* Stack on top of each other */
     }
 
-      
-  /* Move the second image under the right column */
-  .left img:nth-of-type(2) {
-    display: block;
-    margin-top: 20px; /* Optional: add spacing */
-    order: 2;
-  }
-
-  /* Hide the second image initially */
-  .left img:nth-of-type(2) {
-    display: none;
-  }
-
-  /* Display the second image below the right column */
-  .right + .left img:nth-of-type(2) {
-    display: block;
-  }
-
-@media (max-width: 768px) {
-    .header img {
-        max-height: 200px; /* Reduce max-height for mobile */
+    /* Move the second image to appear below the right column */
+    .left img:nth-of-type(2) {
+        display: block;
+        margin-top: 20px; /* Optional: add spacing */
+        width: 100%; /* Optional: adjust the image size for mobile */
     }
 
-@media (max-width: 768px) {
+    /* Reduce header image size for mobile */
+    .header img {
+        max-height: 200px;
+    }
+
+    /* Additional styling for smaller screens */
     #draw-canvas {
-        height: 400px; /* Reduced height for smaller screens */
+        height: 400px;
     }
 
     .left,
@@ -180,13 +169,11 @@ h1 {
         width: 100%;
         height: auto;
     }
-    
-/* Mobile-specific styling */
-@media (max-width: 768px) {
+
     .header .header-text {
-        font-size: 24px; /* Further scale down font size on smaller screens */
-        top: 5px; /* Adjust top positioning for mobile */
+        font-size: 24px;
+        top: 5px;
         white-space: nowrap;
-        padding: 0 10px; /* Add padding to prevent edge overflow */
+        padding: 0 10px;
     }
 }

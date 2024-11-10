@@ -56,12 +56,34 @@ h1 {
     width: 90%;
 }
 
+.image-container {
+        position: relative;
+        display: inline-block;
+}
+
 .hover-image {
-        transition: filter 0.3s ease; /* Smooth transition effect */
+        transition: filter 0.3s ease; /* Smooth grayscale transition */
 }
 
 .hover-image:hover {
-        filter: grayscale(100%); /* Apply grayscale on hover */
+        filter: grayscale(100%); /* Apply grayscale effect */
+}
+
+.hover-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none; /* Makes the text unclickable */
+}
+
+.image-container:hover .hover-text {
+        opacity: 1; /* Show text on hover */
 }
 
 /* Right column */

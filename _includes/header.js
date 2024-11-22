@@ -1,5 +1,5 @@
 // header.js
-fetch('header.html')
+fetch('_includes/header.html')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
